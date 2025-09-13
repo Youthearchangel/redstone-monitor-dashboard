@@ -36,16 +36,19 @@ const PriceChart = ({ data, token }) => {
           <Line 
             type="monotone" 
             dataKey="redstone" 
-            stroke="#ff6b6b" 
-            strokeWidth={2}
+            stroke="#dc2626" 
+            strokeWidth={3}
             name="Redstone"
+            dot={{ fill: '#dc2626', strokeWidth: 2, r: 4 }}
           />
           <Line 
             type="monotone" 
             dataKey="other" 
-            stroke="#4ecdc4" 
-            strokeWidth={2}
+            stroke="#ffffff" 
+            strokeWidth={3}
             name="CoinGecko"
+            strokeDasharray="5 5"
+            dot={{ fill: '#ffffff', stroke: '#dc2626', strokeWidth: 2, r: 4 }}
           />
         </LineChart>
       </ResponsiveContainer>

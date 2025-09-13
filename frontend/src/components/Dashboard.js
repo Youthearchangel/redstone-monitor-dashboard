@@ -4,6 +4,7 @@ import StatusCard from './StatusCard';
 import PriceChart from './PriceChart';
 import AlertList from './AlertList';
 import LoadingSpinner from './LoadingSpinner';
+import Logo from './Logo';
 
 const Dashboard = () => {
   const [logs, setLogs] = useState([]);
@@ -79,7 +80,10 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <h1>Redstone Price Monitor</h1>
+        <div className="header-left">
+          <Logo size={50} className="header-logo" />
+          <h1>Redstone Price Monitor</h1>
+        </div>
         <button 
           onClick={() => fetchData(true)} 
           className={`refresh-btn ${refreshing ? 'refreshing' : ''}`}

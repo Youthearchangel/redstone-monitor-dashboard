@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 50%, #ffffff 100%);
   min-height: 100vh;
 }
 
@@ -30,11 +30,22 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
   padding: 20px 30px;
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .dashboard-header h1 {
@@ -45,19 +56,22 @@ body {
 }
 
 .refresh-btn {
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #dc2626;
+  color: #dc2626;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
 .refresh-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: #dc2626;
+  color: white;
   transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
 .refresh-btn:disabled {
@@ -112,11 +126,13 @@ body {
 }
 
 .status-card.status-ok {
-  border-left: 5px solid #4ade80;
+  border-left: 5px solid #dc2626;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.9) 100%);
 }
 
 .status-card.status-error {
-  border-left: 5px solid #ef4444;
+  border-left: 5px solid #dc2626;
+  background: linear-gradient(135deg, rgba(254, 226, 226, 0.95) 0%, rgba(254, 242, 242, 0.9) 100%);
 }
 
 .status-header {
@@ -140,13 +156,13 @@ body {
 }
 
 .status-ok .status-badge {
-  background: #dcfce7;
-  color: #166534;
+  background: #dc2626;
+  color: white;
 }
 
 .status-error .status-badge {
-  background: #fee2e2;
-  color: #991b1b;
+  background: #dc2626;
+  color: white;
 }
 
 .price-comparison {
@@ -182,11 +198,12 @@ body {
 .discrepancy-info {
   margin-top: 15px;
   padding: 10px;
-  background: #fef3c7;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
   border-radius: 8px;
   text-align: center;
   font-weight: 500;
-  color: #92400e;
+  color: #dc2626;
+  border: 1px solid #fca5a5;
 }
 
 .chart-section {
@@ -260,18 +277,18 @@ body {
 }
 
 .alert-item.alert-stale {
-  border-left-color: #f59e0b;
-  background: #fffbeb;
+  border-left-color: #dc2626;
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
 }
 
 .alert-item.alert-delayed {
-  border-left-color: #3b82f6;
-  background: #eff6ff;
+  border-left-color: #dc2626;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
 }
 
 .alert-item.alert-discrepancy {
-  border-left-color: #ef4444;
-  background: #fef2f2;
+  border-left-color: #dc2626;
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
 }
 
 .alert-header {
@@ -330,7 +347,7 @@ body {
 .spinner {
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top: 3px solid #667eea;
+  border-top: 3px solid #dc2626;
   animation: spin 1s linear infinite;
 }
 
@@ -382,6 +399,10 @@ body {
     flex-direction: column;
     gap: 15px;
     text-align: center;
+  }
+  
+  .header-left {
+    justify-content: center;
   }
   
   .dashboard-header h1 {
