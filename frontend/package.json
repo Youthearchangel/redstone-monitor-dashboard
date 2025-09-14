@@ -9,8 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.12.1",
     "clsx": "^2.1.1",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-scripts": "5.0.1",
     "recharts": "^3.2.0",
     "tailwind-merge": "^3.3.1",
@@ -29,8 +29,16 @@
     ]
   },
   "browserslist": {
-    "production": "[\">0.2%\",\"not dead\",\"not op_mini all\"]",
-    "development": "[\"last 1 chrome version\",\"last 1 firefox version\",\"last 1 safari version\"]"
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
